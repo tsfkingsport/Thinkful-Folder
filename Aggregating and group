@@ -1,0 +1,19 @@
+SELECT zip,
+	date,
+	MAX(maxtemperaturef) 
+FROM 
+	weather
+GROUP BY zip, date;
+
+SELECT COUNT(station_id)
+FROM stations
+GROUP BY station_id;
+
+SELECT 
+	MIN(duration)
+FROM trips
+GROUP BY duration;
+
+SELECT AVG(duration)
+FROM trips
+GROUP BY end_station;
