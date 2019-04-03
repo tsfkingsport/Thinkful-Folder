@@ -1,3 +1,37 @@
+My new code 
+SELECT date, maxtemperaturef, zip
+FROM weather
+ORDER BY maxtemperaturef DESC
+LIMIT (1)
+
+ANSWER: 2015-11-17
+
+SELECT station_id, COUNT(*)
+FROM stations
+GROUP BY station_id;
+
+ANSWER:  They all have a count of 1
+
+SELECT *
+FROM trips
+ORDER BY duration ASC
+LIMIT (1)
+
+ANSWER: trip_id 1116337
+
+SELECT end_station, ROUND(AVG(duration),2)
+FROM trips
+GROUP BY end_station
+
+
+
+
+
+
+
+
+
+My old code
 SELECT zip,
 	date,
 	MAX(maxtemperaturef) 
