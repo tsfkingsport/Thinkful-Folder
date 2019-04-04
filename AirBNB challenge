@@ -1,0 +1,21 @@
+1)
+SELECT * 
+FROM sfo_listings
+ORDER BY price DESC
+LIMIT 1
+2)
+
+SELECT neighbourhood, ROUND(AVG(CAST(availability_365 AS int)),2)
+FROM sfo_listings
+GROUP BY neighbourhood
+ORDER BY AVG(CAST(availability_365 AS int)) DESC
+LIMIT 100
+
+SELECT neighbourhood, ROUND(AVG(CAST(availability_365 AS int)),2) AS availability
+FROM sfo_listings
+GROUP BY neighbourhood
+ORDER BY availability DESC
+LIMIT 100
+
+
+3)
