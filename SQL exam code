@@ -38,6 +38,17 @@ ORDER BY state
 
 ;
 
+
+--ACTUAL SOLUTION 
+SELECT ROUND(AVG(avg_math_4_score),2), state, MAX(avg_math_4_score), MIN(avg_math_4_score) 
+FROM naep
+
+GROUP BY state
+HAVING MAX(avg_math_4_score) - MIN(avg_math_4_score) > 30
+ORDER BY state
+;
+
+
 --5 This took a while 
 SELECT state AS bottom_10_states
 FROM naep
@@ -45,7 +56,7 @@ WHERE year = 2000
 
 GROUP BY state
 ORDER BY AVG(avg_math_4_score)
-LIMIT 10
+LIMIT 10;
 
 --6
 SELECT ROUND(AVG(avg_math_4_score), 2), state
