@@ -31,7 +31,7 @@ ORDER BY state
 SELECT state AS bottom_10_states
 FROM naep
 WHERE year = 2000
-ORDER BY AVG(avg_math_4_score)
+ORDER BY avg_math_4_score
 LIMIT 10;
 
 --6
